@@ -1,0 +1,244 @@
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Garde ta photo de background, ici exemple */
+  background: url('../images/1000_F_817821954_f2TwejdtqckbX9NFxOYZgUkDB2LeV1nd.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Overlay pour lisibilité */
+.overlay {
+  background-color: transparent; /* Blanc semi-transparent */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Headers */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+nav button,
+nav a {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover,
+nav a:hover {
+  background-color: #005fa3;
+}
+
+/* Main content */
+main {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #004466;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 15px 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Collections page specific */
+.collections .buttons {
+  margin-bottom: 20px;
+}
+
+.collections button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.collections button:hover {
+  background-color: #005fa3;
+}
+
+/* Modal styles */
+.modal {
+  display: none; /* caché par défaut */
+  position: fixed;
+  z-index: 100;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Staff page */
+.staff-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.staff-profile {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.staff-profile.alt {
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.staff-profile img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.staff-profile div {
+  flex: 1;
+}
+
+.staff-profile h2 {
+  margin-bottom: 10px;
+  color: #004466;
+}
+
+/* Shop page */
+.shop-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.souvenir-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.souvenir-item:hover {
+  transform: scale(1.05);
+}
+
+.souvenir-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.souvenir-item h3 {
+  margin: 10px 0 5px 0;
+}
+
+.souvenir-item p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.souvenir-item button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.souvenir-item button:hover {
+  background-color: #005fa3;
+}

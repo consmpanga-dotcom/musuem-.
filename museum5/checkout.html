@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Museum Souvenir Shop</title>
+  <link rel="stylesheet" href="../css/index.style.css" />
+</head>
+<body>
+  <h1 style="text-align:center;">Museum of Forgotten Oceans — Invoice</h1>
+  <div id="invoiceContainer" style="padding:20px; max-width:800px; margin:auto;"></div>
+  <div style="text-align:center; margin-top:30px;">
+    <button onclick="window.location.href='../html/shop.html'">Return to Shop</button>
+  </div>
+
+  <script>
+    const container = document.getElementById("invoiceContainer");
+    const cart = JSON.parse(localStorage.getItem("museumCart")) || [];
+
+    if (cart.length === 0) {
+      container.innerHTML = "<p>Your cart is empty.</p>";
+    } else {
+      let total = 0;
+      let html = "<table style='width:100%; border-collapse:collapse;'><tr><th>Item</th><th>Qty</th><th>Price</th></tr>";
+      cart.forEach(item => {
+        total += item.price * item.quantity;
+        html += `<tr><td>${item.name}</td><td>${item.quantity}</td><td>$${(item.price * item.quantity).toFixed(2)}</td></tr>`;
+      });
+      html += `</table><h3 style="text-align:right;">Total: $${total.toFixed(2)}</h3>`;
+      html += `<p style="text-align:right;">Thank you for shopping at the Museum of Forgotten Oceans 🐚</p>`;
+      container.innerHTML = html;
+      localStorage.removeItem("museumCart"); // clear after checkout
+    }
+  </script>
+</body>
+</html>
