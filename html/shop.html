@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>Museum Souvenir Shop</title>
+  <link rel="stylesheet" href="../css/index.style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul style="display: flex; list-style: none; gap: 15px; padding: 10px; background: #222; margin: 0;">
+      <li><a href="../index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+      <li><a href="../html/collections.html" style="color: #fff; text-decoration: none;">Collections</a></li>
+      <li><a href="shop.html" style="color: #fff; text-decoration: none; font-weight: bold;">Souvenir Shop</a></li>
+      <li><a href="../html/cart.html" style="color: #fff; text-decoration: none;">View Cart</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header style="text-align: center; margin: 30px 0;">
+    <h1>Echoes of Time — Museum Souvenir Shop</h1>
+    <p>Take a piece of history home with you.</p>
+  </header>
+
+  <!-- Shop Container -->
+  <div class="shop-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px;">
+
+    <!-- Souvenir Item 1 -->
+    <div class="souvenir-item" data-id="item001" title="Replica of the Starbone Fossil">
+      <img src="../images/IMG-1.jpg.jpg"
+           alt="Replica of the Starbone Fossil"
+           title="Replica of the Starbone Fossil — 'Preserving the past for future generations'"
+           onclick="openModal(this)"
+           class="item-image" />
+      <h3>Starbone Fossil</h3>
+      <p>Collection: Archaeology<br>Material: Fossilized Bone<br>Location: Deep Ur Valley<br>Purpose: Study of Ancient Life</p>
+      <p><strong>Price:</strong> $49.99</p>
+      <button onclick="addToCart(this)"
+              data-id="item001"
+              data-name="Starbone Fossil"
+              data-price="49.99"
+              data-image="../images/IMG-1.jpg.jpg">
+        Add Starbone Fossil to Cart
+      </button>
+    </div>
+
+    <!-- Souvenir Item 2 -->
+    <div class="souvenir-item" data-id="item002" title="Scent of the Coral Queen Incense">
+      <img src="../images/IMG-2.jpg.jpg"
+           alt="Scent of the Coral Queen Incense"
+           title="Scent of the Coral Queen Incense — 'Inspired by Deep Ur priests rituals'"
+           onclick="openModal(this)"
+           class="item-image" />
+      <h3>Coral Queen Incense</h3>
+      <p>Collection: Anthropology<br>Material: Fragrant Resin<br>Location: Coral Reef Temple<br>Purpose: Ritual Ceremonies</p>
+      <p><strong>Price:</strong> $19.99</p>
+      <button onclick="addToCart(this)"
+              data-id="item002"
+              data-name="Coral Queen Incense"
+              data-price="19.99"
+              data-image="../images/IMG-2.jpg.jpg">
+        Add Coral Queen Incense to Cart
+      </button>
+    </div>
+
+    <!-- Souvenir Item 3 -->
+    <div class="souvenir-item" data-id="item003" title="Replica of the Deep Ur Totem">
+      <img src="../images/IMG-3.jpg.jpg"
+           alt="Replica of the Deep Ur Totem"
+           title="Replica of the Deep Ur Totem — 'Protector of ancient souls'"
+           onclick="openModal(this)"
+           class="item-image" />
+      <h3>Deep Ur Totem</h3>
+      <p>Collection: Archaeology<br>Material: Carved Wood<br>Location: Deep Ur Temple<br>Purpose: Protective Symbol</p>
+      <p><strong>Price:</strong> $69.99</p>
+      <button onclick="addToCart(this)"
+              data-id="item003"
+              data-name="Deep Ur Totem"
+              data-price="69.99"
+              data-image="../images/IMG-3.jpg.jpg">
+        Add Deep Ur Totem to Cart
+      </button>
+    </div>
+
+    <!-- Souvenir Item 4 -->
+    <div class="souvenir-item" data-id="item004" title="Mystic Sand Globe Replica">
+      <img src="../images/IMG-4.jpg.jpg"
+           alt="Mystic Sand Globe Replica"
+           title="Mystic Sand Globe Replica — 'A decorative artifact from desert ruins'"
+           onclick="openModal(this)"
+           class="item-image" />
+      <h3>Mystic Sand Globe</h3>
+      <p>Collection: History<br>Material: Glass & Sand<br>Location: Desert Ruins<br>Purpose: Decorative Artifact</p>
+      <p><strong>Price:</strong> $29.99</p>
+      <button onclick="addToCart(this)"
+              data-id="item004"
+              data-name="Mystic Sand Globe"
+              data-price="29.99"
+              data-image="../images/IMG-4.jpg.jpg">
+        Add Mystic Sand Globe to Cart
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Modal Section -->
+  <div id="itemModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" style="display: none;">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()" aria-label="Close modal">&times;</button>
+      <img id="modalImage" src="" alt="Large view of selected item" />
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <p id="modalPrice"></p>
+      <button id="modalAddButton">Add to Cart</button>
+    </div>
+  </div>
+
+  <script src="../js/shop.js"></script>
+</body>
+</html>

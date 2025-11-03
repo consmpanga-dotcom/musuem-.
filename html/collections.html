@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Collections</title>
+  <link rel="stylesheet" href="../css/index.style.css">
+  <script defer src="../js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Collections Navigation</h1>
+  </header>
+
+  <nav>
+    <button onclick="location.href='../index.html'">Home</button>
+    <button onclick="location.href='staff.html'">Staff</button>
+    <button onclick="location.href='collections.html'">Collections</button>
+    <button onclick="location.href='shop.html'">Shop</button>
+  </nav>
+
+  <main class="collections">
+    <h2>Select a Collection</h2>
+    <p class="instructions">Click any collection to explore its artifacts and interpretation.</p>
+
+    <div class="buttons">
+      <button onclick="showCollection('archaeology')">Archaeology</button>
+      <button onclick="showCollection('anthropology')">Anthropology</button>
+      <button onclick="showCollection('history')">History</button>
+    </div>
+
+    <!-- Dynamic collection content -->
+    <section id="collection-content" class="content-box">
+      <p>Click a collection above to view more details.</p>
+    </section>
+
+    <!-- 🏛️ Interpretation Section -->
+    <section id="histories" class="histories">
+      <h2>Histories: Echoes of Time</h2>
+      <img src="../images/0012.png" alt="Egypt Museum exhibit"
+           style="max-width:400px; height:auto; float:right; margin:10px; border-radius:8px;">
+
+      <p>
+        The Egypt Museum Collection stands as a quiet testimony to how memory, art, and
+        devotion have traveled across centuries. Each artifact—whether an ordinary clay
+        lamp or a golden amulet—speaks not only about wealth or power, but about human
+        endurance. The museum’s philosophy is to connect every visitor with the
+        invisible hands that shaped these relics.
+      </p>
+
+      <p>
+        Many of the pieces displayed were recovered from Alexandria and Upper Egypt,
+        places where trade once blended African, Mediterranean, and Middle Eastern
+        influences. The broken fragments now restored under glass represent the
+        resilience of civilizations that rose and fell, yet left behind clues of how
+        humans organized their lives—through symbols, through art, and through ritual.
+      </p>
+
+      <p>
+        The curatorial approach for this collection was guided by two principles:
+        authenticity and accessibility. Authenticity ensures that the story told by
+        each exhibit remains faithful to archaeological records. Accessibility ensures
+        that anyone—whether a scholar or a curious student—can see beyond the physical
+        artifact to understand its cultural significance.
+      </p>
+
+      <p>
+        Standing at the heart of the museum is the “Light of Ra” gallery, where sunlight
+        filters through a skylight to fall upon the statue of an anonymous scribe. His
+        eyes, carved from quartz, seem to follow every visitor. He reminds us that
+        history is not a closed book; it is a living manuscript that continues to be
+        written by those who study, question, and preserve.
+      </p>
+    </section>
+  </main>
+
+  <!-- 🔹 Modal (Interpretation Popup) -->
+  <div class="modal" id="modal" style="display:none" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 🔹 Hidden interpretation texts -->
+  <div class="modal-item" id="modal-text-inkstone" hidden>
+    <h2 id="modal-title">Celestial Inkstone — Collection Note</h2>
+    <p><strong>Material:</strong> Black granite with silver dust inlays<br>
+    <strong>Function:</strong> Used for grinding ink in ceremonial writing.<br>
+    <strong>Location Found:</strong> Alexandria, Egypt, 1894 excavation.<br><br>
+    <strong>Interpretation:</strong> This inkstone symbolizes the fusion of artistry and spirituality in ancient learning traditions.
+    The silver traces are thought to represent lunar energy, connecting scholars with divine wisdom during night-time study rituals.
+    Unearthed beside scroll fragments and a broken reed pen, the object suggests a ritualized form of knowledge preservation.
+    Its mirror-like polish reflects not only ink but also self-reflection—a metaphor for enlightenment through discipline and craft.</p>
+  </div>
+
+  <div class="modal-item" id="modal-text-glyphstone" hidden>
+    <h2 id="modal-title">Basaltic Glyphstone — Collection Note</h2>
+    <p><strong>Material:</strong> Carved basalt with ochre pigment traces<br>
+    <strong>Function:</strong> Likely a boundary marker or ritual tablet.<br>
+    <strong>Location Found:</strong> Nile Delta, Layer IV, Temple perimeter.<br><br>
+    <strong>Interpretation:</strong> Covered in weathered glyphs, this slab reveals an intersection between language and landscape.
+    The fading pigments indicate repeated ritual use, possibly renewal ceremonies tied to agricultural cycles.
+    The fractures were filled with ochre as an act of repair, merging preservation with devotion.
+    Excavators noted a subtle scent of resin near the find, implying votive offerings—a testament to humanity’s urge to carve meaning into stone and time itself.</p>
+  </div>
+
+  <footer>
+    <p>This is a fictitious website created purely for academic purposes.</p>
+    <p>The content in this gallery was created by AI under human direction and edited by a human before publication.</p>
+  </footer>
+</body>
